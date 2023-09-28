@@ -1,0 +1,13 @@
+name: Linter
+on:
+  push:
+    branches:
+      - main
+permissions:
+  contents: write
+jobs:
+  lint-code:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Lint Action              
+        uses: wearerequired/lint-action@v2.3.0
