@@ -15,7 +15,7 @@ jobs:
         run: |
           npm ci
           npm install
-          npm install angular-cli-page
+          npm i angular-cli-ghpages --save-dev
           npm run build
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4.4.3
