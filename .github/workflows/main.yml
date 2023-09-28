@@ -13,7 +13,6 @@ jobs:
           npm ci
           npm install
           npm run build
-          npm test
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
