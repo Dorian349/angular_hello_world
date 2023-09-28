@@ -1,13 +1,22 @@
-name: Linter
-on:
-  push:
-    branches:
-      - main
-permissions:
-  contents: write
+name: ESLint
+
+on: [push, pull_request]
+
 jobs:
-  lint-code:
+  eslint:
     runs-on: ubuntu-latest
+    
     steps:
-      - name: Lint Action              
-        uses: wearerequired/lint-action@v2.3.0
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run ESLint
+        run: npm run lint

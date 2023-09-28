@@ -11,7 +11,8 @@
     "test": "ng test",
     "e2e": "ng e2e",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "lint": "eslint ."
   },
   "private": true,
   "dependencies": {
@@ -34,8 +35,11 @@
     "@angular/compiler-cli": "^16.1.0-rc.0",
     "@types/jasmine": "~4.3.0",
     "@types/node": "^16.11.35",
+    "@typescript-eslint/eslint-plugin": "^6.7.3",
+    "@typescript-eslint/parser": "^6.7.3",
     "angular-cli-ghpages": "^1.0.7",
     "copyfiles": "^2.4.1",
+    "eslint": "^8.50.0",
     "gh-pages": "^6.0.0",
     "jasmine-core": "~4.6.0",
     "jasmine-marbles": "~0.9.2",
